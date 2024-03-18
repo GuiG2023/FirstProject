@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    footer {
+
+        text-align: center;
+        font-size: larger;
+        font-style: italic;
+        padding: 20px;
+        background: url("/footerbackground.png");
+        color: white;
+    }
+
+    .animation-left,
+    .animation-right {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .animation-right {
+        position: fixed;
+        top: 300px;
+        right: 200px;
+    }
+
+    .animation-left {
+        position: fixed;
+        transform: scaleX(-1);
+        /*flip gif*/
+        top: 300px;
+        left: 200px;
+
+    }
+
+    .hidden {
+        /*hide the ending until gameover() being called*/
+        display: none;
+    }
+
+    .congrat {
+        position: fixed;
+        width: 1000px;
+        height: 1000px;
+        top: 100px;
+        left: 400px;
+        right: 0;
+        background-image: url('/congratulations-congrats.gif');
+        background-size: cover;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .timer {
+        font-size: 30px;
+        font-weight: bold;
+        color: red;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFSU Cards Match</title>
+    <link rel="stylesheet" href="cards.css">
+    <script src="/cards.js"></script>
+</head>
+
+<body>
+    <h1>Errors: <span id="errors">0</span></h1>
+    <div id="board"></div>
+
+    <div id="timer" class="timer">READY?</div>
+    <script src="/timer.js"></script>
+
+    <div class="animation-left">
+        <img id="usagileft" src="/usagi2.gif" width="200px">
+    </div>
+    <div class="animation-right">
+        <img id="usagiright" src="/usagi2.gif" width="200px">
+    </div>
+
+    <div id="ending" class="hidden">
+        <div class="congrat"></div>
+    </div>
+
+    <footer>
+        <p>Author: Guiran Liu</p>
+        <p>StuID: 923620812</p>
+        <p><a href="https://cs.sfsu.edu/">email: gliu@sfsu.edu</a></p>
+        <p>&copy; 2024-2034 Guiran LIU &trade; copytight</p>
+    </footer>
+
+</body>
+
+</html>
