@@ -153,7 +153,7 @@ function update() {
 
 function gameover() { // try to make an end gif
     document.getElementById("ending").classList.remove("hidden");
-    document.getElementById("usagileft").src = "/usagi.gif";
-    document.getElementById("usagiright").src = "/usagi.gif";
+    document.getElementById("usagileft").src = "usagi.gif";
+    document.getElementById("usagiright").src = "usagi.gif";
 }
 
